@@ -65,6 +65,7 @@ if (removeElement) {
         location.assign('/index.html')
     })
 }
+console.log('hey')
 
 
 if (newIngredientElement) {
