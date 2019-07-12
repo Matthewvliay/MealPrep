@@ -1,3 +1,3 @@
-This recipe app is based on the fundamentals of the todo-app and notes-app made by Andrew Mead on his Modern Javascript Bootcamp course. 
+This recipe app is based on the fundamental structure of both the todo app and notes app made by Andrew Mead on his Modern Javascript Bootcamp course. 
 The web application allows you to create your own recipes, include steps on how to make the recipe, and add ingredients.
 If the user has the ingredients required, they can click the checkbox to let it be known on the index page.
