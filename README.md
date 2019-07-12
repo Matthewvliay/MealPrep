@@ -1,1 +1,6 @@
 # Recipe-app
+
+
+INSTRUCTIONS:
+1. npm install
+2. npm run dev-server
