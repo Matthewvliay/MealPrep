@@ -21,6 +21,7 @@
     "uuidv4": "^4.0.0",
     "webpack": "^4.35.2",
     "webpack-cli": "^3.3.4",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-dev-server": "^3.7.2",
+    "lodash": ">=4.17.13"
   }
 }
