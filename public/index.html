@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Recipe Application</title>
+    <link href="/images/favicon.png" rel="icon" />
+    <link href="/styles/styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="header__title">Recipe Application</h1>
+        <h2 class="header__subtitle">Make recipes and never forget</h2>
+      </div>
+    </header>
+    <div class="actions">
+      <div class="actions__container">
+        <input
+          id="search-text"
+          type="text"
+          class="input"
+          placeholder="Filter notes"
+        />
+      </div>
+    </div>
+    <div class="container">
+      <div id="recipes"></div>
+      <button id="create-recipe" class="button">CREATE RECIPE</button>
+    </div>
+    <script src="/scripts/index-bundle.js"></script>
+  </body>
+</html>
