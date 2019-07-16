@@ -1,4 +1,4 @@
-import { getRecipes, saveRecipes, loadRecipes } from './recipes'
+import { getRecipes, saveRecipes } from './recipes'
 import { renderIngredients } from './edit-views'
 import uuidv4 from 'uuid/v4'
 
@@ -10,16 +10,17 @@ const generateIngredientDOM = (ingredient) => {
     const ingredientText = document.createElement("span")
     const removeButton = document.createElement("button")
     const recipeId = location.hash.substring(1)
+    containerEl.classList.add('ingredient-box')
 
     // Setup ingredient checkbox
     checkbox.setAttribute('type', 'checkbox')
+    checkbox.classList.add('checkbox')
     checkbox.checked = ingredient.status
     containerEl.appendChild(checkbox)
-
     checkbox.addEventListener('change', () => {
         toggleIngredient(recipeId, ingredient.id)
-        console.log(ingredient.status)
     })
+
     // Setup the ingredient text
     ingredientText.textContent = ingredient.text
     containerEl.appendChild(ingredientText)
@@ -28,7 +29,7 @@ const generateIngredientDOM = (ingredient) => {
     ingredientEl.appendChild(containerEl)
 
     // Setup the remove button
-    removeButton.textContent = 'danger, remove button.'
+    removeButton.textContent = 'Remove ingredient'
     removeButton.classList.add('button', 'button--text')
     ingredientEl.appendChild(removeButton)
     removeButton.addEventListener('click', () => {
@@ -54,7 +55,7 @@ const createIngredient = (recipeId, text) => {
 const removeIngredient = (recipeId, ingredientId) => {
     const recipe = getRecipes().find((recipe) => recipe.id === recipeId)
     const ingredientIndex = recipe.ingredients.findIndex((ingredient) => ingredient.id === ingredientId)
-    console.log(ingredientIndex)
+
     if (ingredientIndex > -1) {
         recipe.ingredients.splice(ingredientIndex, 1)
         saveRecipes()

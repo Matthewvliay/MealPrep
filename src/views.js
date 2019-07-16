@@ -1,19 +1,16 @@
 
 import { getFilters } from './filters'
-import { getRecipes, saveRecipes, createRecipe } from './recipes'
-import { renderIngredients } from './edit-views'
-import { generateIngredientDOM, updateIngredient } from './ingredients'
-console.log(getRecipes())
+import { getRecipes, saveRecipes, } from './recipes'
+import { generateIngredientDOM, } from './ingredients'
 const statusMessage = (recipe) => {
     let availCount = 0
     const totalIngredients = recipe.ingredients.length
     recipe.ingredients.forEach((ingredient) => {
         if (ingredient.status === true) {
             availCount++
-            console.log(availCount)
         }
     })
-    console.log(availCount)
+
     let msg = ''
     if (totalIngredients === 0) {
         msg = 'please add ingredients'
@@ -63,7 +60,6 @@ const renderRecipes = () => {
     const recipesEl = document.querySelector('#recipes')
     const filters = getFilters()
     const recipes = getRecipes()
-    console.log(recipes)
     const filteredRecipes = recipes.filter((recipe) => recipe.title.toLowerCase().includes(filters.searchText.toLowerCase()))
 
 
@@ -71,7 +67,6 @@ const renderRecipes = () => {
 
     if (filteredRecipes.length > 0) {
         filteredRecipes.forEach((recipe) => {
-            console.log(recipe)
             const recipeEl = generateRecipeDOM(recipe)
             recipesEl.appendChild(recipeEl)
         })

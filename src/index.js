@@ -1,8 +1,9 @@
 
 import "core-js/stable";
 import "regenerator-runtime/runtime";
-import { createIngredient, getRecipes, createRecipe, removeRecipe, removeIngredient } from './recipes'
+import { createRecipe } from './recipes'
 import { renderRecipes } from "./views";
+
 renderRecipes()
 document.querySelector('#create-recipe').addEventListener('click', (e) => {
 
