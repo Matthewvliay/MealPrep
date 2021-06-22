@@ -1,6 +1,7 @@
 
 import "core-js/stable";
 import "regenerator-runtime/runtime";
+import '../public/styles/styles.css';
 import { createRecipe } from './recipes'
 import { renderRecipes } from "./views";
 

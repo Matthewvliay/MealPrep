@@ -1,6 +1,7 @@
 
 import "core-js/stable";
 import "regenerator-runtime/runtime";
+import '../public/styles/styles.css';
 import { initializeEditPage } from './views'
 import { updateRecipe, removeRecipe } from './recipes'
 import { createIngredient } from './ingredients'
